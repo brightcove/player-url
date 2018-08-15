@@ -1,3 +1,10 @@
+<a name="1.1.1"></a>
+## [1.1.1](https://github.com/brightcove/player-url/compare/v1.1.0...v1.1.1) (2018-08-15)
+
+### Bug Fixes
+
+* Make sure we properly encode URL segments. (#3) ([81fdea8](https://github.com/brightcove/player-url/commit/81fdea8)), closes [#3](https://github.com/brightcove/player-url/issues/3)
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/brightcove/player-url/compare/v1.0.0...v1.1.0) (2018-08-15)
 
