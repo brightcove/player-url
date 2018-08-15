@@ -59,6 +59,7 @@
     "rollup-plugin-uglify": "^4.0.0",
     "semver": "^5.1.0",
     "tap": "^12.0.1",
+    "tsml": "^1.0.1",
     "uglify-es": "^3.3.9",
     "videojs-standard": "^6.0.3"
   }

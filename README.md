@@ -112,6 +112,19 @@ Default: `"https://players.brightcove.net"`
 
 A base CDN protocol and hostname. Mainly used for testing, but could have other uses. May have a trailing slash or not.
 
+### `queryParams`
+Type: `Object`
+Default: `null`
+
+When the `iframe` parameter is `true`, this can be used to add a query string to the URL with a whitelist of possible parameters:
+
+- `applicationId`: An application ID used to differentiate analytics across different uses of the same player.
+- `catalogSearch`: A Video Cloud catalog search to perform.
+- `catalogSequence`: A Video Cloud catalog sequence used to populate a playlist.
+- `playlistId`: A Video Cloud playlist ID to load.
+- `playlistVideoId`: A video ID at which to begin Video Cloud playlist playback.
+- `videoId`: A Video Cloud video ID to load.
+
 ## License
 
 Apache-2.0. Copyright (c) Brightcove, Inc.
