@@ -1,6 +1,6 @@
 {
   "name": "@brightcove/player-url",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A module for getting a URL to a Brightcove Player.",
   "main": "dist/brightcove-player-url.cjs.js",
   "module": "dist/brightcove-player-url.es.js",
