@@ -1,3 +1,10 @@
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/brightcove/player-url/compare/v1.0.0...v1.1.0) (2018-08-15)
+
+### Features
+
+* Support whitelisted query string parameters for iframe URLs only. (#2) ([5772b35](https://github.com/brightcove/player-url/commit/5772b35)), closes [#2](https://github.com/brightcove/player-url/issues/2)
+
 <a name="1.0.0"></a>
 # 1.0.0 (2018-08-15)
 
