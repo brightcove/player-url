@@ -2,53 +2,59 @@ const tap = require('tap');
 const tsml = require('tsml');
 const bcpUrl = require('../dist/brightcove-player-url.cjs.js');
 
-tap.test('minimal params', (t) => {
-  const first = bcpUrl({accountId: '1'});
+tap.test('param: accountId', (t) => {
+  const basic = bcpUrl({accountId: '1'});
+  const encoded = bcpUrl({accountId: '1 2'});
 
-  t.equal(first, 'https://players.brightcove.net/1/default_default/index.min.js');
+  t.equal(basic, 'https://players.brightcove.net/1/default_default/index.min.js');
+  t.equal(encoded, 'https://players.brightcove.net/1%202/default_default/index.min.js');
   t.end();
 });
 
 tap.test('param: base', (t) => {
-  const first = bcpUrl({accountId: '1', base: 'foo'});
-  const second = bcpUrl({accountId: '1', base: 'bar/'});
+  const basic = bcpUrl({accountId: '1', base: 'foo'});
+  const trailingSlash = bcpUrl({accountId: '1', base: 'bar/'});
 
-  t.equal(first, 'foo/1/default_default/index.min.js');
-  t.equal(second, 'bar/1/default_default/index.min.js');
+  t.equal(basic, 'foo/1/default_default/index.min.js');
+  t.equal(trailingSlash, 'bar/1/default_default/index.min.js');
   t.end();
 });
 
 tap.test('param: playerId', (t) => {
-  const first = bcpUrl({accountId: '1', playerId: 'foo'});
+  const basic = bcpUrl({accountId: '1', playerId: 'foo'});
+  const encoded = bcpUrl({accountId: '1', playerId: 'foo bar'});
 
-  t.equal(first, 'https://players.brightcove.net/1/foo_default/index.min.js');
+  t.equal(basic, 'https://players.brightcove.net/1/foo_default/index.min.js');
+  t.equal(encoded, 'https://players.brightcove.net/1/foo%20bar_default/index.min.js');
   t.end();
 });
 
 tap.test('param: embedId', (t) => {
-  const first = bcpUrl({accountId: '1', embedId: 'foo'});
+  const basic = bcpUrl({accountId: '1', embedId: 'foo'});
+  const encoded = bcpUrl({accountId: '1', embedId: 'foo bar'});
 
-  t.equal(first, 'https://players.brightcove.net/1/default_foo/index.min.js');
+  t.equal(basic, 'https://players.brightcove.net/1/default_foo/index.min.js');
+  t.equal(encoded, 'https://players.brightcove.net/1/default_foo%20bar/index.min.js');
   t.end();
 });
 
 tap.test('param: minified', (t) => {
-  const first = bcpUrl({accountId: '1', minified: false});
-  const second = bcpUrl({accountId: '1', minified: true});
+  const notMinified = bcpUrl({accountId: '1', minified: false});
+  const minified = bcpUrl({accountId: '1', minified: true});
 
-  t.equal(first, 'https://players.brightcove.net/1/default_default/index.js');
-  t.equal(second, 'https://players.brightcove.net/1/default_default/index.min.js');
+  t.equal(notMinified, 'https://players.brightcove.net/1/default_default/index.js');
+  t.equal(minified, 'https://players.brightcove.net/1/default_default/index.min.js');
   t.end();
 });
 
 tap.test('param: iframe', (t) => {
-  const first = bcpUrl({accountId: '1', iframe: true});
-  const second = bcpUrl({accountId: '1', iframe: true, minified: false});
-  const third = bcpUrl({accountId: '1', iframe: true, minified: true});
+  const iframe = bcpUrl({accountId: '1', iframe: true});
+  const iframeNotMinified = bcpUrl({accountId: '1', iframe: true, minified: false});
+  const iframeMinified = bcpUrl({accountId: '1', iframe: true, minified: true});
 
-  t.equal(first, 'https://players.brightcove.net/1/default_default/index.html');
-  t.equal(second, 'https://players.brightcove.net/1/default_default/index.html');
-  t.equal(third, 'https://players.brightcove.net/1/default_default/index.html');
+  t.equal(iframe, 'https://players.brightcove.net/1/default_default/index.html');
+  t.equal(iframeNotMinified, 'https://players.brightcove.net/1/default_default/index.html');
+  t.equal(iframeMinified, 'https://players.brightcove.net/1/default_default/index.html');
   t.end();
 });
 

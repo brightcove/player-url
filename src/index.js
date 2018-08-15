@@ -134,6 +134,10 @@ const brightcovePlayerUrl = ({
     qs = getQueryString(queryParams);
   }
 
+  accountId = encodeURIComponent(accountId);
+  playerId = encodeURIComponent(playerId);
+  embedId = encodeURIComponent(embedId);
+
   return `${base}/${accountId}/${playerId}_${embedId}/index.${ext}${qs}`;
 };
 
