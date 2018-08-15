@@ -1,30 +1,33 @@
 import {version as VERSION} from '../package.json';
 
 /**
- * Generate an HTTPS URL to a Brightcove Player on our CDN.
+ * Generate a URL to a Brightcove Player.
  *
- * @param  {string}  args.accountId
+ * @param  {Object}  params
+ *         A set of parameters describing the player URL to create.
+ *
+ * @param  {string}  params.accountId
  *         A Brightcove account ID.
  *
- * @param  {string}  [args.playerId="default"]
+ * @param  {string}  [params.playerId="default"]
  *         A Brightcove player ID.
  *
- * @param  {string}  [args.embedId="default"]
+ * @param  {string}  [params.embedId="default"]
  *         A Brightcove player embed ID.
  *
- * @param  {boolean} [args.iframe=false]
+ * @param  {boolean} [params.iframe=false]
  *         Whether to return a URL for an HTML document to be embedded in
  *         an iframe.
  *
- * @param  {boolean} [args.minified=true]
+ * @param  {boolean} [params.minified=true]
  *         When the `iframe` argument is `false`, this can be used to control
  *         whether the minified or unminified JavaScript URL is returned.
  *
- * @param  {string} [args.base="https://players.brightcove.net"]
+ * @param  {string} [params.base="https://players.brightcove.net"]
  *         A base CDN protocol and hostname. Mainly used for testing.
  *
  * @return {string}
- *         An HTTPS URL to a Brightcove Player on our CDN.
+ *         A URL to a Brightcove Player.
  */
 const brightcovePlayerUrl = ({
   accountId,

@@ -1,4 +1,4 @@
-# brightcove-player-url
+# `@brightcove/player-url`
 
 A module for getting a URL to a [Brightcove Player](https://support.brightcove.com/brightcove-player).
 
@@ -10,11 +10,11 @@ npm install --save @brightcove/player-url
 
 ## Usage
 
-To include brightcove-player-url on your website or web application, use any of the following methods.
+To include `@brightcove/player-url` on your website or web application, use any of the following methods.
 
 ### ES Modules
 
-When using in an ES modules-compatible environment or bundler like Rollup or webpack, install brightcove-player-url via npm and `import` the plugin as you would any other module.
+When using in an ES modules-compatible environment or bundler like Rollup or webpack, install `@brightcove/player-url` via npm and `import` the plugin as you would any other module.
 
 ```js
 import brightcovePlayerUrl from '@brightcove/player-url';
@@ -29,7 +29,7 @@ console.log(myPlayerUrl); // https://players.brightcove.net/1234567890/abc123xyz
 
 ### Browserify/CommonJS
 
-When using with Browserify, install brightcove-player-url via npm and `require` the plugin as you would any other module.
+When using with Browserify, install `@brightcove/player-url` via npm and `require` the plugin as you would any other module.
 
 ```js
 var brightcovePlayerUrl = require('@brightcove/player-url');
@@ -73,10 +73,11 @@ This is the simplest case and least recommended. We expect most will bundle this
 </script>
 ```
 
-## Arguments
-This module takes the following arguments.
+## Parameters
+This module takes the following parameters.
 
-### `accountId` **REQUIRED**
+### `accountId`
+**Required**
 Type: `string`
 
 A Brightcove account ID.
@@ -103,13 +104,13 @@ Whether to return a URL for an HTML document to be embedded in an iframe.
 Type: `boolean`
 Default: `true`
 
-When the `iframe` argument is `false`, this can be used to control whether the minified or unminified JavaScript URL is returned.
+When the `iframe` parameter is `false`, this can be used to control whether the minified or unminified JavaScript URL is returned.
 
-### `embedId`
+### `base`
 Type: `string`
 Default: `"https://players.brightcove.net"`
 
-A base CDN protocol and hostname. Mainly used for testing. Can have a trailing slash or not.
+A base CDN protocol and hostname. Mainly used for testing, but could have other uses. May have a trailing slash or not.
 
 ## License
 
