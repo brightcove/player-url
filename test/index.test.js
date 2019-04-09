@@ -67,6 +67,7 @@ tap.test('param: queryParams', (t) => {
     accountId: '1',
     iframe: true,
     queryParams: {
+      adConfigId: 'a c',
       applicationId: 'a a',
       catalogSearch: 'b',
       catalogSequence: 'c',
@@ -81,6 +82,7 @@ tap.test('param: queryParams', (t) => {
     accountId: '1',
     iframe: true,
     queryParams: {
+      adConfigId: { ac: 1 },
       applicationId: {a: 1},
       catalogSearch: {b: 2},
       catalogSequence: {c: 3},
@@ -96,7 +98,8 @@ tap.test('param: queryParams', (t) => {
 
   t.equal(all, tsml`
     https://players.brightcove.net/1/default_default/index.html
-      ?applicationId=a%20a
+      ?adConfigId=a%20c
+      &applicationId=a%20a
       &catalogSearch=b
       &catalogSequence=c
       &playlistId=d
@@ -105,7 +108,8 @@ tap.test('param: queryParams', (t) => {
 
   t.equal(json, tsml`
     https://players.brightcove.net/1/default_default/index.html
-      ?applicationId=%5Bobject%20Object%5D
+      ?adConfigId=%5Bobject%20Object%5D
+      &applicationId=%5Bobject%20Object%5D
       &catalogSearch=%7B%22b%22%3A2%7D
       &catalogSequence=%7B%22c%22%3A3%7D
       &playlistId=%5Bobject%20Object%5D

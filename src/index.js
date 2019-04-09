@@ -5,6 +5,7 @@ const JSON_ALLOWED_PARAMS = ['catalogSearch', 'catalogSequence'];
 
 // The parameters that may be set as query string parameters for iframes.
 const IFRAME_ALLOWED_QUERY_PARAMS = [
+  'adConfigId',
   'applicationId',
   'catalogSearch',
   'catalogSequence',
