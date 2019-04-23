@@ -118,6 +118,7 @@ Default: `null`
 
 When the `iframe` parameter is `true`, this can be used to add a query string to the URL with a whitelist of possible parameters:
 
+- `adConfigId`: A playback token that specifies which SSAI configuration, CDN and DVR options to use for a Brightcove Live stream.
 - `applicationId`: An application ID used to differentiate analytics across different uses of the same player.
 - `catalogSearch`: A Video Cloud catalog search to perform.
 - `catalogSequence`: A Video Cloud catalog sequence used to populate a playlist.
