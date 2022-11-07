@@ -11,7 +11,8 @@ const IFRAME_ALLOWED_QUERY_PARAMS = [
   'catalogSequence',
   'playlistId',
   'playlistVideoId',
-  'videoId'
+  'videoId',
+  'interactivityProjectId'
 ];
 
 /**
