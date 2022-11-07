@@ -1,3 +1,10 @@
+<a name="1.2.0"></a>
+# [1.2.0](https://github.com/brightcove/player-url/compare/v1.1.1...v1.2.0) (2022-11-07)
+
+### Features
+
+* Support adConfigId in query string parameter whitelist for iframe URLs. (#4) ([9af6142](https://github.com/brightcove/player-url/commit/9af6142)), closes [#4](https://github.com/brightcove/player-url/issues/4)
+
 <a name="1.1.1"></a>
 ## [1.1.1](https://github.com/brightcove/player-url/compare/v1.1.0...v1.1.1) (2018-08-15)
 
