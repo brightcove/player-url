@@ -1,3 +1,10 @@
+<a name="1.3.0"></a>
+# [1.3.0](https://github.com/brightcove/player-url/compare/v1.2.0...v1.3.0) (2022-11-09)
+
+### Features
+
+* Support interactivityProjectId in query string parameter whitelist for iframe URLs. (#6) ([d81df35](https://github.com/brightcove/player-url/commit/d81df35)), closes [#6](https://github.com/brightcove/player-url/issues/6)
+
 <a name="1.2.0"></a>
 # [1.2.0](https://github.com/brightcove/player-url/compare/v1.1.1...v1.2.0) (2022-11-07)
 
