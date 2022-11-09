@@ -125,6 +125,7 @@ When the `iframe` parameter is `true`, this can be used to add a query string to
 - `playlistId`: A Video Cloud playlist ID to load.
 - `playlistVideoId`: A video ID at which to begin Video Cloud playlist playback.
 - `videoId`: A Video Cloud video ID to load.
+- `interactivityProjectId`: An Interactivity project ID to load.
 
 ## License
 

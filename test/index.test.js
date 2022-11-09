@@ -74,6 +74,7 @@ tap.test('param: queryParams', (t) => {
       playlistId: 'd',
       playlistVideoId: 'e',
       videoId: 'f',
+      interactivityProjectId: 'g',
       ignored: 'NOPE'
     }
   });
@@ -88,7 +89,8 @@ tap.test('param: queryParams', (t) => {
       catalogSequence: {c: 3},
       playlistId: {d: 4},
       playlistVideoId: {e: 5},
-      videoId: {f: 6}
+      videoId: {f: 6},
+      interactivityProjectId: {g: 7}
     }
   });
 
@@ -104,7 +106,8 @@ tap.test('param: queryParams', (t) => {
       &catalogSequence=c
       &playlistId=d
       &playlistVideoId=e
-      &videoId=f`);
+      &videoId=f
+      &interactivityProjectId=g`);
 
   t.equal(json, tsml`
     https://players.brightcove.net/1/default_default/index.html
@@ -114,7 +117,8 @@ tap.test('param: queryParams', (t) => {
       &catalogSequence=%7B%22c%22%3A3%7D
       &playlistId=%5Bobject%20Object%5D
       &playlistVideoId=%5Bobject%20Object%5D
-      &videoId=%5Bobject%20Object%5D`);
+      &videoId=%5Bobject%20Object%5D
+      &interactivityProjectId=%5Bobject%20Object%5D`);
 
   t.done();
 });
